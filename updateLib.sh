@@ -11,7 +11,7 @@ if ! [ -d $1 ]; then
   changed=1
 else
   
-  echo testing for local branch
+  echo testing for local branch of $1
   cd $1
   git remote show origin origin | grep -q "local out of date"
   grepRet=$?
