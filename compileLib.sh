@@ -43,5 +43,6 @@ do
 done
 
 echo done compiling, pushing to git
+cd $root_folder
 ./updateGit.sh
 
