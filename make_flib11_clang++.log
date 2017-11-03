@@ -46,30 +46,27 @@ clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIE
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c System/Clock.cpp -o ../libLinux/static/System/Clock.o 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Window/GLContext.cpp -o ../libLinux/static/Window/GLContext.o 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Window/Event.cpp -o ../libLinux/static/Window/Event.o 
-In file included from Window/GLContext.cpp:17:
-../include/FRONTIER/Window/GLContext.hpp:23:10: fatal error: 'FRONTIER/System/vector4.hpp' file not found
-#include <FRONTIER/System/vector4.hpp>
-         ^
-In file included from Window/Event.cpp:19:
-In file included from ../include/FRONTIER/Window/Event.hpp:28:
-In file included from ../include/FRONTIER/Window/Window.hpp:28:
-../include/FRONTIER/Window/GLContext.hpp:23:10: fatal error: 'FRONTIER/System/vector4.hpp' file not found
-#include <FRONTIER/System/vector4.hpp>
-         ^
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Window/Window.cpp -o ../libLinux/static/Window/Window.o 
-In file included from Window/Window.cpp:18:
-In file included from ../include/FRONTIER/Window/Window.hpp:28:
-../include/FRONTIER/Window/GLContext.hpp:23:10: fatal error: 'FRONTIER/System/vector4.hpp' file not found
-#include <FRONTIER/System/vector4.hpp>
-         ^
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c GL/GL_CHECK.cpp -o ../libLinux/static/GL/GL_CHECK.o 
-1 error generated.
-makefile:43: recipe for target '../libLinux/static/Window/Event.o' failed
-make: *** [../libLinux/static/Window/Event.o] Error 1
-make: *** Waiting for unfinished jobs....
-1 error generated.
-makefile:43: recipe for target '../libLinux/static/Window/GLContext.o' failed
-make: *** [../libLinux/static/Window/GLContext.o] Error 1
-1 error generated.
-makefile:43: recipe for target '../libLinux/static/Window/Window.o' failed
-make: *** [../libLinux/static/Window/Window.o] Error 1
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c GL/GL_FUNCTIONS.cpp -o ../libLinux/static/GL/GL_FUNCTIONS.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiWindow.cpp -o ../libLinux/static/Gui/GuiWindow.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/MouseMoveListener.cpp -o ../libLinux/static/Gui/MouseMoveListener.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiCallback.cpp -o ../libLinux/static/Gui/GuiCallback.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiLayout.cpp -o ../libLinux/static/Gui/GuiLayout.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/PushButton.cpp -o ../libLinux/static/Gui/PushButton.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/ClickListener.cpp -o ../libLinux/static/Gui/ClickListener.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiContext.cpp -o ../libLinux/static/Gui/GuiContext.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiScrollBar.cpp -o ../libLinux/static/Gui/GuiScrollBar.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiElement.cpp -o ../libLinux/static/Gui/GuiElement.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GridLayout.cpp -o ../libLinux/static/Gui/GridLayout.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/ScrollListener.cpp -o ../libLinux/static/Gui/ScrollListener.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/TransformListener.cpp -o ../libLinux/static/Gui/TransformListener.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiText.cpp -o ../libLinux/static/Gui/GuiText.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/ScrollBar.cpp -o ../libLinux/static/Gui/ScrollBar.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiButton.cpp -o ../libLinux/static/Gui/GuiButton.o 
+ar rcs ../libLinux/libf-graphics.a ../libLinux/static/Graphics/Mesh.o ../libLinux/static/Graphics/ShaderManager.o ../libLinux/static/Graphics/FloatTexture.o ../libLinux/static/Graphics/Color.o ../libLinux/static/Graphics/Image.o ../libLinux/static/Graphics/FontRenderer.o ../libLinux/static/Graphics/IndexHolder.o ../libLinux/static/Graphics/DrawCall.o ../libLinux/static/Graphics/ShaderSource.o ../libLinux/static/Graphics/Metrics.o ../libLinux/static/Graphics/FixedShaderManager.o ../libLinux/static/Graphics/RenderStates.o ../libLinux/static/Graphics/SpriteManager.o ../libLinux/static/Graphics/TextureConvolution.o ../libLinux/static/Graphics/FloatAttributeUpdater.o ../libLinux/static/Graphics/FrameBuffer.o ../libLinux/static/Graphics/Texture.o ../libLinux/static/Graphics/Attribute.o ../libLinux/static/Graphics/Transformable.o ../libLinux/static/Graphics/DepthTexture.o ../libLinux/static/Graphics/Shader.o ../libLinux/static/Graphics/AttributeRef.o ../libLinux/static/Graphics/Drawable.o ../libLinux/static/Graphics/DrawData.o ../libLinux/static/Graphics/Font.o ../libLinux/static/Graphics/Glyph.o ../libLinux/static/Graphics/VertexState.o ../libLinux/static/Graphics/AssocPoint.o ../libLinux/static/Graphics/CubeTexture.o ../libLinux/static/Graphics/Buffer.o ../libLinux/static/Graphics/GlObject.o ../libLinux/static/Graphics/TextureAtlas.o 
+ar rcs ../libLinux/libf-system.a ../libLinux/static/System/Quaternion.o ../libLinux/static/System/Time.o ../libLinux/static/System/Camera.o ../libLinux/static/System/Result.o ../libLinux/static/System/Sleep.o ../libLinux/static/System/String.o ../libLinux/static/System/Clock.o 
+ar rcs ../libLinux/libf-window.a ../libLinux/static/Window/GLContext.o ../libLinux/static/Window/Event.o ../libLinux/static/Window/Window.o 
+ar rcs ../libLinux/libf-gl.a ../libLinux/static/GL/GL_CHECK.o ../libLinux/static/GL/GL_FUNCTIONS.o 
+ar rcs ../libLinux/libf-gui.a ../libLinux/static/Gui/GuiWindow.o ../libLinux/static/Gui/MouseMoveListener.o ../libLinux/static/Gui/GuiCallback.o ../libLinux/static/Gui/GuiLayout.o ../libLinux/static/Gui/PushButton.o ../libLinux/static/Gui/ClickListener.o ../libLinux/static/Gui/GuiContext.o ../libLinux/static/Gui/GuiScrollBar.o ../libLinux/static/Gui/GuiElement.o ../libLinux/static/Gui/GridLayout.o ../libLinux/static/Gui/ScrollListener.o ../libLinux/static/Gui/TransformListener.o ../libLinux/static/Gui/GuiText.o ../libLinux/static/Gui/ScrollBar.o ../libLinux/static/Gui/GuiButton.o 
+ar rcs ../libLinux/libf.a ../libLinux/static/Graphics/Mesh.o ../libLinux/static/Graphics/ShaderManager.o ../libLinux/static/Graphics/FloatTexture.o ../libLinux/static/Graphics/Color.o ../libLinux/static/Graphics/Image.o ../libLinux/static/Graphics/FontRenderer.o ../libLinux/static/Graphics/IndexHolder.o ../libLinux/static/Graphics/DrawCall.o ../libLinux/static/Graphics/ShaderSource.o ../libLinux/static/Graphics/Metrics.o ../libLinux/static/Graphics/FixedShaderManager.o ../libLinux/static/Graphics/RenderStates.o ../libLinux/static/Graphics/SpriteManager.o ../libLinux/static/Graphics/TextureConvolution.o ../libLinux/static/Graphics/FloatAttributeUpdater.o ../libLinux/static/Graphics/FrameBuffer.o ../libLinux/static/Graphics/Texture.o ../libLinux/static/Graphics/Attribute.o ../libLinux/static/Graphics/Transformable.o ../libLinux/static/Graphics/DepthTexture.o ../libLinux/static/Graphics/Shader.o ../libLinux/static/Graphics/AttributeRef.o ../libLinux/static/Graphics/Drawable.o ../libLinux/static/Graphics/DrawData.o ../libLinux/static/Graphics/Font.o ../libLinux/static/Graphics/Glyph.o ../libLinux/static/Graphics/VertexState.o ../libLinux/static/Graphics/AssocPoint.o ../libLinux/static/Graphics/CubeTexture.o ../libLinux/static/Graphics/Buffer.o ../libLinux/static/Graphics/GlObject.o ../libLinux/static/Graphics/TextureAtlas.o ../libLinux/static/System/Quaternion.o ../libLinux/static/System/Time.o ../libLinux/static/System/Camera.o ../libLinux/static/System/Result.o ../libLinux/static/System/Sleep.o ../libLinux/static/System/String.o ../libLinux/static/System/Clock.o ../libLinux/static/Window/GLContext.o ../libLinux/static/Window/Event.o ../libLinux/static/Window/Window.o ../libLinux/static/GL/GL_CHECK.o ../libLinux/static/GL/GL_FUNCTIONS.o ../libLinux/static/Gui/GuiWindow.o ../libLinux/static/Gui/MouseMoveListener.o ../libLinux/static/Gui/GuiCallback.o ../libLinux/static/Gui/GuiLayout.o ../libLinux/static/Gui/PushButton.o ../libLinux/static/Gui/ClickListener.o ../libLinux/static/Gui/GuiContext.o ../libLinux/static/Gui/GuiScrollBar.o ../libLinux/static/Gui/GuiElement.o ../libLinux/static/Gui/GridLayout.o ../libLinux/static/Gui/ScrollListener.o ../libLinux/static/Gui/TransformListener.o ../libLinux/static/Gui/GuiText.o ../libLinux/static/Gui/ScrollBar.o ../libLinux/static/Gui/GuiButton.o
