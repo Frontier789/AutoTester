@@ -20,7 +20,7 @@ rm -f -r libL
 rm -f treeMaker
 make --no-print-directory -C singleFile clean CXX=g++
 rm -f -r libL
-rm -f testVectors testMatrices renderBall newtonToPNG testDelegate testClock mandelToPNG collisionBSP sandPouring
+rm -f testVectors testMatrices sdfFont renderBall newtonToPNG testDelegate testClock mandelToPNG collisionBSP sandPouring
 make --no-print-directory -C spriteTest clean CXX=g++
 rm -f -r libL
 rm -f spriteTest
@@ -51,7 +51,7 @@ rm -f -r libL
 rm -f treeMaker
 make --no-print-directory -C singleFile clean CXX=g++
 rm -f -r libL
-rm -f testVectors testMatrices renderBall newtonToPNG testDelegate testClock mandelToPNG collisionBSP sandPouring
+rm -f testVectors testMatrices sdfFont renderBall newtonToPNG testDelegate testClock mandelToPNG collisionBSP sandPouring
 make --no-print-directory -C spriteTest clean CXX=g++
 rm -f -r libL
 rm -f spriteTest
