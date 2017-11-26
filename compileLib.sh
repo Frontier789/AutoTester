@@ -50,7 +50,7 @@ do
   fi
 done
 
-echo done compiling, pushing to git
+echo done compiling, pushing to git ok=$compile_ok
 cd $root_folder
 ./updateGit.sh $compile_ok
 
