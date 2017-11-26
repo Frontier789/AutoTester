@@ -31,33 +31,3 @@ make --no-print-directory -C kdTree clean CXX=g++
 rm -f -r libL
 rm -f kdTree
 rm -f -r ../libLinux
-make --no-print-directory -C guiTextTest clean CXX=g++
-rm -f -r libL
-rm -f guiTextTest
-make --no-print-directory -C fontSDF clean CXX=g++
-rm -f -r libL
-rm -f fontSDF
-make --no-print-directory -C tetraRot clean CXX=g++
-rm -f -r libL
-rm -f tetRot
-make --no-print-directory -C shaderTest clean CXX=g++
-rm -f -r libL
-rm -f shaderTest
-make --no-print-directory -C hexTerrain clean CXX=g++
-rm -f -r libL
-rm -f hexTer
-make --no-print-directory -C treeMaker clean CXX=g++
-rm -f -r libL
-rm -f treeMaker
-make --no-print-directory -C singleFile clean CXX=g++
-rm -f -r libL
-rm -f testVectors testMatrices sdfFont renderBall newtonToPNG testDelegate testClock mandelToPNG collisionBSP sandPouring
-make --no-print-directory -C spriteTest clean CXX=g++
-rm -f -r libL
-rm -f spriteTest
-make --no-print-directory -C guiLayout clean CXX=g++
-rm -f -r libL
-rm -f guiLayout
-make --no-print-directory -C kdTree clean CXX=g++
-rm -f -r libL
-rm -f kdTree
