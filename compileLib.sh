@@ -16,22 +16,30 @@ cd $root_folder
 echo pull done
   
 echo > $res_folder/make_${1}_clean.log
-  
+
+compile_ok=0
+
 for compiler in $compilers
 do
   echo compiling using $compiler
   cd $root_folder/$1/$3
   make clean >> $res_folder/make_${1}_clean.log 2>&1
   make -j4 CXX=$compiler > $res_folder/make_${1}_${compiler}.log 2>&1
-  if [ $? -eq 0 ]; then
+  compile_ok=$?
+  if [ $compile_ok -eq 0 ]; then
     echo build succeeded
     if [ -d "../test" ]; then
       echo building tests
       cd ../test
       make clean >> $res_folder/make_${1}_clean.log 2>&1
-	  make -j4 CXX=$compiler > $res_folder/make_${1}_test_${compiler}.log 2>&1
-	   
-	  if [ $? -eq 0 ]; then
+      
+      target=$res_folder/make_${1}_test_${compiler}.log
+      echo 'compile time:' > $target
+      date >> $target
+      echo >> $target
+      make -j4 CXX=$compiler >> $target 2>&1
+       
+      if [ $? -eq 0 ]; then
         echo tests succeeded
       else
         echo tests failed
@@ -44,5 +52,5 @@ done
 
 echo done compiling, pushing to git
 cd $root_folder
-./updateGit.sh
+./updateGit.sh $compile_ok
 
