@@ -17,7 +17,7 @@ echo pull done
   
 echo > $res_folder/make_${1}_clean.log
 
-compile_ok=0
+compile_ok=1
 
 for compiler in $compilers
 do
@@ -25,8 +25,7 @@ do
   cd $root_folder/$1/$3
   make clean >> $res_folder/make_${1}_clean.log 2>&1
   make -j4 CXX=$compiler > $res_folder/make_${1}_${compiler}.log 2>&1
-  compile_ok=$?
-  if [ $compile_ok -eq 0 ]; then
+  if [ $? -eq 0 ]; then
     echo build succeeded
     if [ -d "../test" ]; then
       echo building tests
@@ -46,6 +45,7 @@ do
       fi
     fi
   else
+    compile_ok=0
     echo failed miserably
   fi
 done
