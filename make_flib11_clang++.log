@@ -37,31 +37,46 @@ clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIE
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Graphics/Attribute.cpp -o ../libLinux/static/Graphics/Attribute.o 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Graphics/GlObject.cpp -o ../libLinux/static/Graphics/GlObject.o 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Graphics/FixedShaderManager.cpp -o ../libLinux/static/Graphics/FixedShaderManager.o 
-Graphics/Font.cpp:234:32: error: moving a temporary object prevents copy elision [-Werror,-Wpessimizing-move]
-                ret.m_sharedData->renderer = std::move(m_sharedData->renderer.createHardCopy());
-                                             ^
-Graphics/Font.cpp:234:32: note: remove std::move call here
-                ret.m_sharedData->renderer = std::move(m_sharedData->renderer.createHardCopy());
-                                             ^~~~~~~~~~                                       ~
-Graphics/Font.cpp:307:36: error: moving a temporary object prevents copy elision [-Werror,-Wpessimizing-move]
-                                fg::Image *img = new fg::Image(std::move(renderGlyph(c,style,&leftdown)));
-                                                               ^
-Graphics/Font.cpp:307:36: note: remove std::move call here
-                                fg::Image *img = new fg::Image(std::move(renderGlyph(c,style,&leftdown)));
-                                                               ^~~~~~~~~~                              ~
-Graphics/Font.cpp:331:19: error: moving a temporary object prevents copy elision [-Werror,-Wpessimizing-move]
-                        Image sdfImg = std::move(renderImg.convertToSDF(10,[](Color c){return c.a > 127;},0));
-                                       ^
-Graphics/Font.cpp:331:19: note: remove std::move call here
-                        Image sdfImg = std::move(renderImg.convertToSDF(10,[](Color c){return c.a > 127;},0));
-                                       ^~~~~~~~~~                                                           ~
-Graphics/Font.cpp:332:25: error: moving a temporary object prevents copy elision [-Werror,-Wpessimizing-move]
-                        Image scaledSDFImg = std::move(sdfImg.scale(sdfImg.getSize()*.3));
-                                             ^
-Graphics/Font.cpp:332:25: note: remove std::move call here
-                        Image scaledSDFImg = std::move(sdfImg.scale(sdfImg.getSize()*.3));
-                                             ^~~~~~~~~~                                 ~
-4 errors generated.
-makefile:52: recipe for target '../libLinux/static/Graphics/Font.o' failed
-make: *** [../libLinux/static/Graphics/Font.o] Error 1
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c System/Quaternion.cpp -o ../libLinux/static/System/Quaternion.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c System/Time.cpp -o ../libLinux/static/System/Time.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c System/Camera.cpp -o ../libLinux/static/System/Camera.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c System/Result.cpp -o ../libLinux/static/System/Result.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c System/Sleep.cpp -o ../libLinux/static/System/Sleep.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c System/String.cpp -o ../libLinux/static/System/String.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c System/Clock.cpp -o ../libLinux/static/System/Clock.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Window/GLContext.cpp -o ../libLinux/static/Window/GLContext.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Window/Window.cpp -o ../libLinux/static/Window/Window.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Window/Event.cpp -o ../libLinux/static/Window/Event.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c GL/GL_CHECK.cpp -o ../libLinux/static/GL/GL_CHECK.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c GL/GL_FUNCTIONS.cpp -o ../libLinux/static/GL/GL_FUNCTIONS.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiWindow.cpp -o ../libLinux/static/Gui/GuiWindow.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/MouseMoveListener.cpp -o ../libLinux/static/Gui/MouseMoveListener.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiLayout.cpp -o ../libLinux/static/Gui/GuiLayout.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiCallback.cpp -o ../libLinux/static/Gui/GuiCallback.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/PushButton.cpp -o ../libLinux/static/Gui/PushButton.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/ClickListener.cpp -o ../libLinux/static/Gui/ClickListener.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiContext.cpp -o ../libLinux/static/Gui/GuiContext.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiScrollBar.cpp -o ../libLinux/static/Gui/GuiScrollBar.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiElement.cpp -o ../libLinux/static/Gui/GuiElement.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GridLayout.cpp -o ../libLinux/static/Gui/GridLayout.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiText.cpp -o ../libLinux/static/Gui/GuiText.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/TransformListener.cpp -o ../libLinux/static/Gui/TransformListener.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/ScrollBar.cpp -o ../libLinux/static/Gui/ScrollBar.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/ScrollListener.cpp -o ../libLinux/static/Gui/ScrollListener.o 
+Gui/GuiText.cpp:339:14: error: moving a temporary object prevents copy elision [-Werror,-Wpessimizing-move]
+                        sprites = std::move(font.getSprites(renderedText,style));
+                                  ^
+Gui/GuiText.cpp:339:14: note: remove std::move call here
+                        sprites = std::move(font.getSprites(renderedText,style));
+                                  ^~~~~~~~~~                                   ~
+Gui/GuiText.cpp:369:16: error: moving a temporary object prevents copy elision [-Werror,-Wpessimizing-move]
+                        m_sprites = std::move(SpritesFromText(m_string,m_style,getFont(),m_charSize,m_align,m_wrapMode,viewSize,m_viewOffset,m_clr,getPosition()).getSprites());
+                                    ^
+Gui/GuiText.cpp:369:16: note: remove std::move call here
+                        m_sprites = std::move(SpritesFromText(m_string,m_style,getFont(),m_charSize,m_align,m_wrapMode,viewSize,m_viewOffset,m_clr,getPosition()).getSprites());
+                                    ^~~~~~~~~~                                                                                                                                ~
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Gui/GuiButton.cpp -o ../libLinux/static/Gui/GuiButton.o 
+2 errors generated.
+makefile:52: recipe for target '../libLinux/static/Gui/GuiText.o' failed
+make: *** [../libLinux/static/Gui/GuiText.o] Error 1
 make: *** Waiting for unfinished jobs....
