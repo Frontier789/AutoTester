@@ -71,6 +71,30 @@ Window/Xlib/XlibWindow.cpp:557:27: error: ‘fileStr1’ was not declared in thi
         else if (file.find(fileStr1) == 0)
                            ^
 g++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c GL/GL_CHECK.cpp -o ../libLinux/static/GL/GL_CHECK.o 
+In file included from Window/Window.cpp:26:0:
+Window/Xlib/XlibWindow.cpp: In member function ‘void fw::Xlib::Window::processEvent(XEvent&)’:
+Window/Xlib/XlibWindow.cpp:553:8: error: ‘string’ was not declared in this scope
+        string fileStr2 = "file://localhost";
+        ^
+Window/Xlib/XlibWindow.cpp:553:8: note: suggested alternatives:
+In file included from /usr/include/c++/5/iosfwd:39:0,
+                 from ../include/FRONTIER/System/Vector2.inl:527,
+                 from ../include/FRONTIER/System/Vector2.hpp:824,
+                 from Window/Window.cpp:17:
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   ‘std::__cxx11::string’
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/5/bits/stringfwd.h:74:33: note:   ‘std::__cxx11::string’
+In file included from Window/Window.cpp:26:0:
+Window/Xlib/XlibWindow.cpp:554:15: error: expected ‘;’ before ‘fileStr1’
+        string fileStr1 = "file://";
+               ^
+Window/Xlib/XlibWindow.cpp:555:22: error: ‘fileStr2’ was not declared in this scope
+        if (file.find(fileStr2) == 0)
+                      ^
+Window/Xlib/XlibWindow.cpp:557:27: error: ‘fileStr1’ was not declared in this scope
+        else if (file.find(fileStr1) == 0)
+                           ^
 g++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c GL/GL_FUNCTIONS.cpp -o ../libLinux/static/GL/GL_FUNCTIONS.o 
 makefile:52: recipe for target '../libLinux/static/Window/Window.o' failed
 make: *** [../libLinux/static/Window/Window.o] Error 1

@@ -48,6 +48,22 @@ clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIE
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Window/Event.cpp -o ../libLinux/static/Window/Event.o 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Window/Window.cpp -o ../libLinux/static/Window/Window.o 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c GL/GL_CHECK.cpp -o ../libLinux/static/GL/GL_CHECK.o 
+In file included from Window/Window.cpp:26:
+Window/Xlib/XlibWindow.cpp:553:8: error: unknown type name 'string'; did you mean 'std::string'?
+                                                        string fileStr2 = "file://localhost";
+                                                        ^~~~~~
+                                                        std::string
+/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/bits/stringfwd.h:74:33: note: 'std::string' declared here
+  typedef basic_string<char>    string;   
+                                ^
+In file included from Window/Window.cpp:26:
+Window/Xlib/XlibWindow.cpp:554:8: error: unknown type name 'string'; did you mean 'std::string'?
+                                                        string fileStr1 = "file://";
+                                                        ^~~~~~
+                                                        std::string
+/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/bits/stringfwd.h:74:33: note: 'std::string' declared here
+  typedef basic_string<char>    string;   
+                                ^
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG  -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c GL/GL_FUNCTIONS.cpp -o ../libLinux/static/GL/GL_FUNCTIONS.o 
 In file included from Window/Window.cpp:26:
 Window/Xlib/XlibWindow.cpp:553:8: error: unknown type name 'string'; did you mean 'std::string'?
