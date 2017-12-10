@@ -1,5 +1,5 @@
 compile time:
-Fri  8 Dec 13:26:37 CET 2017
+Sun 10 Dec 13:57:32 CET 2017
 
 make --no-print-directory -C guiTextTest  CXX=clang++
 make --no-print-directory -C fontSDF  CXX=clang++
@@ -7,68 +7,68 @@ make --no-print-directory -C tetraRot  CXX=clang++
 make --no-print-directory -C shaderTest  CXX=clang++
 mkdir -p libL
 mkdir -p libL
-mkdir -p libL
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
+mkdir -p libL
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
 mkdir -p libL
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
 clang++ -s -L ../../libLinux -o guiTextTest libL/main.o -lf -lGL -lX11 -lpthread 
 clang++ -s -L ../../libLinux -o tetRot libL/main.o -lf -lGL -lX11 -lpthread 
-clang++ -s -L ../../libLinux -o fontSDF libL/main.o -lf -lGL -lX11 -lpthread 
 make --no-print-directory -C hexTerrain  CXX=clang++
-clang++ -s -L ../../libLinux -o shaderTest libL/main.o -lf -lGL -lX11 -lpthread 
 mkdir -p libL
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c HexTerrain.cpp -o libL/HexTerrain.o 
+clang++ -s -L ../../libLinux -o shaderTest libL/main.o -lf -lGL -lX11 -lpthread 
+clang++ -s -L ../../libLinux -o fontSDF libL/main.o -lf -lGL -lX11 -lpthread 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c HexPlotter.cpp -o libL/HexPlotter.o 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
 make --no-print-directory -C treeMaker  CXX=clang++
 mkdir -p libL
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
 make --no-print-directory -C singleFile  CXX=clang++
 make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=testVectors.cpp EXEC=testVectors FPATH=../.. CXX=clang++
 mkdir -p libL
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c testVectors.cpp -o libL/testVectors.o 
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
-make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=testMatrices.cpp EXEC=testMatrices FPATH=../.. CXX=clang++
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c testMatrices.cpp -o libL/testMatrices.o 
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
-clang++ -s -L ../../libLinux -o testVectors libL/testVectors.o -lf -lGL -lX11 -lpthread 
-make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=sdfFont.cpp EXEC=sdfFont FPATH=../.. CXX=clang++
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c sdfFont.cpp -o libL/sdfFont.o 
-clang++ -s -L ../../libLinux -o testMatrices libL/testMatrices.o -lf -lGL -lX11 -lpthread 
-make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=renderBall.cpp EXEC=renderBall FPATH=../.. CXX=clang++
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c renderBall.cpp -o libL/renderBall.o 
-clang++ -s -L ../../libLinux -o treeMaker libL/main.o -lf -lGL -lX11 -lpthread 
-clang++ -s -L ../../libLinux -o hexTer libL/HexTerrain.o libL/HexPlotter.o libL/main.o -lf -lGL -lX11 -lpthread 
-make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=newtonToPNG.cpp EXEC=newtonToPNG FPATH=../.. CXX=clang++
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c newtonToPNG.cpp -o libL/newtonToPNG.o 
-clang++ -s -L ../../libLinux -o sdfFont libL/sdfFont.o -lf -lGL -lX11 -lpthread 
-make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=testDelegate.cpp EXEC=testDelegate FPATH=../.. CXX=clang++
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c testDelegate.cpp -o libL/testDelegate.o 
-clang++ -s -L ../../libLinux -o renderBall libL/renderBall.o -lf -lGL -lX11 -lpthread 
 make --no-print-directory -C spriteTest  CXX=clang++
 mkdir -p libL
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
+clang++ -s -L ../../libLinux -o testVectors libL/testVectors.o -lf -lGL -lX11 -lpthread 
+make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=testMatrices.cpp EXEC=testMatrices FPATH=../.. CXX=clang++
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c testMatrices.cpp -o libL/testMatrices.o 
+clang++ -s -L ../../libLinux -o hexTer libL/HexTerrain.o libL/HexPlotter.o libL/main.o -lf -lGL -lX11 -lpthread 
+make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=sdfFont.cpp EXEC=sdfFont FPATH=../.. CXX=clang++
+clang++ -s -L ../../libLinux -o treeMaker libL/main.o -lf -lGL -lX11 -lpthread 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c sdfFont.cpp -o libL/sdfFont.o 
+clang++ -s -L ../../libLinux -o spriteTest libL/main.o -lf -lGL -lX11 -lpthread 
+make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=renderBall.cpp EXEC=renderBall FPATH=../.. CXX=clang++
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c renderBall.cpp -o libL/renderBall.o 
+clang++ -s -L ../../libLinux -o testMatrices libL/testMatrices.o -lf -lGL -lX11 -lpthread 
 make --no-print-directory -C guiLayout  CXX=clang++
+make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=newtonToPNG.cpp EXEC=newtonToPNG FPATH=../.. CXX=clang++
 mkdir -p libL
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c ColorPicker.cpp -o libL/ColorPicker.o 
-clang++ -s -L ../../libLinux -o newtonToPNG libL/newtonToPNG.o -lf -lGL -lX11 -lpthread 
-clang++ -s -L ../../libLinux -o testDelegate libL/testDelegate.o -lf -lGL -lX11 -lpthread 
-make --no-print-directory -C kdTree  CXX=clang++
-mkdir -p libL
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c newtonToPNG.cpp -o libL/newtonToPNG.o 
+clang++ -s -L ../../libLinux -o sdfFont libL/sdfFont.o -lf -lGL -lX11 -lpthread 
+clang++ -s -L ../../libLinux -o renderBall libL/renderBall.o -lf -lGL -lX11 -lpthread 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
+clang++ -s -L ../../libLinux -o newtonToPNG libL/newtonToPNG.o -lf -lGL -lX11 -lpthread 
+make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=testDelegate.cpp EXEC=testDelegate FPATH=../.. CXX=clang++
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c testDelegate.cpp -o libL/testDelegate.o 
 make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=testClock.cpp EXEC=testClock FPATH=../.. CXX=clang++
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c testClock.cpp -o libL/testClock.o 
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
-clang++ -s -L ../../libLinux -o spriteTest libL/main.o -lf -lGL -lX11 -lpthread 
-clang++ -s -L ../../libLinux -o testClock libL/testClock.o -lf -lGL -lX11 -lpthread 
 make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=mandelToPNG.cpp EXEC=mandelToPNG FPATH=../.. CXX=clang++
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c mandelToPNG.cpp -o libL/mandelToPNG.o 
-clang++ -s -L ../../libLinux -o kdTree libL/main.o -lf -lGL -lX11 -lpthread 
+clang++ -s -L ../../libLinux -o testDelegate libL/testDelegate.o -lf -lGL -lX11 -lpthread 
 make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=collisionBSP.cpp EXEC=collisionBSP FPATH=../.. CXX=clang++
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c collisionBSP.cpp -o libL/collisionBSP.o 
-make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=sandPouring.cpp EXEC=sandPouring FPATH=../.. CXX=clang++
-clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c sandPouring.cpp -o libL/sandPouring.o 
 clang++ -s -L ../../libLinux -o mandelToPNG libL/mandelToPNG.o -lf -lGL -lX11 -lpthread 
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c collisionBSP.cpp -o libL/collisionBSP.o 
+clang++ -s -L ../../libLinux -o testClock libL/testClock.o -lf -lGL -lX11 -lpthread 
+make --no-print-directory -f ../../include/FRONTIER/Makefiles/fproject.mk F_CPP_FILES=sandPouring.cpp EXEC=sandPouring FPATH=../.. CXX=clang++
+make --no-print-directory -C kdTree  CXX=clang++
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c sandPouring.cpp -o libL/sandPouring.o 
+mkdir -p libL
+clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -O3 -DFRONTIER_DEBUG -I ../../include -c main.cpp -o libL/main.o 
 clang++ -s -L ../../libLinux -o guiLayout libL/ColorPicker.o libL/main.o -lf -lGL -lX11 -lpthread 
 clang++ -s -L ../../libLinux -o collisionBSP libL/collisionBSP.o -lf -lGL -lX11 -lpthread 
+clang++ -s -L ../../libLinux -o kdTree libL/main.o -lf -lGL -lX11 -lpthread 
 clang++ -s -L ../../libLinux -o sandPouring libL/sandPouring.o -lf -lGL -lX11 -lpthread 
