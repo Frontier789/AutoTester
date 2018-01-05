@@ -1,10 +1,8 @@
-cd .. && mkdir libLinux
-cd ../libLinux && mkdir static
-cd ../libLinux && cd static && mkdir Graphics
-cd ../libLinux && cd static && mkdir System
-cd ../libLinux && cd static && mkdir Window
-cd ../libLinux && cd static && mkdir GL
-cd ../libLinux && cd static && mkdir Gui
+mkdir -p ../libLinux/static/Graphics
+mkdir -p ../libLinux/static/System
+mkdir -p ../libLinux/static/Window
+mkdir -p ../libLinux/static/GL
+mkdir -p ../libLinux/static/Gui
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Graphics/Mesh.cpp -o ../libLinux/static/Graphics/Mesh.o 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Graphics/ShaderManager.cpp -o ../libLinux/static/Graphics/ShaderManager.o 
 clang++ -std=gnu++11 -pedantic -Werror -Wextra -Wall -DFRONTIER_DEBUG -DFRONTIER_MISSING_IMPL_NO_WARNING -I ../include -c Graphics/FloatTexture.cpp -o ../libLinux/static/Graphics/FloatTexture.o 
