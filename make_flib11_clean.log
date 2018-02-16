@@ -20,7 +20,7 @@ rm -f -r libL
 rm -f mandelbrot
 make --no-print-directory -C computeShader clean CXX=g++
 rm -f -r libL
-rm -f pixyTest
+rm -f compShader
 make --no-print-directory -C hexTerrain clean CXX=g++
 rm -f -r libL
 rm -f hexTer
@@ -63,7 +63,7 @@ rm -f -r libL
 rm -f mandelbrot
 make --no-print-directory -C computeShader clean CXX=g++
 rm -f -r libL
-rm -f pixyTest
+rm -f compShader
 make --no-print-directory -C hexTerrain clean CXX=g++
 rm -f -r libL
 rm -f hexTer
