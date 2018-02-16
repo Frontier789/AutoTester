@@ -18,6 +18,9 @@ rm -f shaderTest
 make --no-print-directory -C mandelbrot clean CXX=g++
 rm -f -r libL
 rm -f mandelbrot
+make --no-print-directory -C computeShader clean CXX=g++
+rm -f -r libL
+rm -f pixyTest
 make --no-print-directory -C hexTerrain clean CXX=g++
 rm -f -r libL
 rm -f hexTer
@@ -26,7 +29,7 @@ rm -f -r libL
 rm -f treeMaker
 make --no-print-directory -C singleFile clean CXX=g++
 rm -f -r libL
-rm -f testVectors testMatrices sdfFont renderBall newtonToPNG testDelegate testClock mandelToPNG collisionBSP sandPouring
+rm -f testVectors testMatrices sdfFont renderBall newtonToPNG testDelegate testClock mandelToPNG collisionBSP sandPouring cmdArgs
 make --no-print-directory -C spriteTest clean CXX=g++
 rm -f -r libL
 rm -f spriteTest
@@ -58,6 +61,9 @@ rm -f shaderTest
 make --no-print-directory -C mandelbrot clean CXX=g++
 rm -f -r libL
 rm -f mandelbrot
+make --no-print-directory -C computeShader clean CXX=g++
+rm -f -r libL
+rm -f pixyTest
 make --no-print-directory -C hexTerrain clean CXX=g++
 rm -f -r libL
 rm -f hexTer
@@ -66,7 +72,7 @@ rm -f -r libL
 rm -f treeMaker
 make --no-print-directory -C singleFile clean CXX=g++
 rm -f -r libL
-rm -f testVectors testMatrices sdfFont renderBall newtonToPNG testDelegate testClock mandelToPNG collisionBSP sandPouring
+rm -f testVectors testMatrices sdfFont renderBall newtonToPNG testDelegate testClock mandelToPNG collisionBSP sandPouring cmdArgs
 make --no-print-directory -C spriteTest clean CXX=g++
 rm -f -r libL
 rm -f spriteTest
