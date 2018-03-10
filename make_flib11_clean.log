@@ -9,6 +9,9 @@ rm -f pixyTest
 make --no-print-directory -C fontSDF clean CXX=g++
 rm -f -r libL
 rm -f fontSDF
+make --no-print-directory -C thickLine clean CXX=g++
+rm -f -r libL
+rm -f thickLine
 make --no-print-directory -C tetraRot clean CXX=g++
 rm -f -r libL
 rm -f tetRot
@@ -52,6 +55,9 @@ rm -f pixyTest
 make --no-print-directory -C fontSDF clean CXX=g++
 rm -f -r libL
 rm -f fontSDF
+make --no-print-directory -C thickLine clean CXX=g++
+rm -f -r libL
+rm -f thickLine
 make --no-print-directory -C tetraRot clean CXX=g++
 rm -f -r libL
 rm -f tetRot
