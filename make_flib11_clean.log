@@ -42,6 +42,9 @@ rm -f guiLayout
 make --no-print-directory -C EditText clean CXX=g++
 rm -f -r libL
 rm -f tetRot
+make --no-print-directory -C GLTest clean CXX=g++
+rm -f -r libL
+rm -f GLTest
 make --no-print-directory -C kdTree clean CXX=g++
 rm -f -r libL
 rm -f kdTree
@@ -88,6 +91,9 @@ rm -f guiLayout
 make --no-print-directory -C EditText clean CXX=g++
 rm -f -r libL
 rm -f tetRot
+make --no-print-directory -C GLTest clean CXX=g++
+rm -f -r libL
+rm -f GLTest
 make --no-print-directory -C kdTree clean CXX=g++
 rm -f -r libL
 rm -f kdTree
